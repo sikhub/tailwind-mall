@@ -3,14 +3,14 @@
 {% endif %}
 <div class="mall-form-control">
     <label for="{{ type }}company">{{ 'offline.mall::frontend.form.company' | trans }}</label>
-    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}company" type="text"
+    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base text-lg font-lighting-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}company" type="text"
            value="{{ address.company }}"
            placeholder="{{ 'offline.mall::frontend.form.company_placeholder' | trans }}" name="{{ type }}company">
     <div data-validate-for="{{ type }}company"></div>
 </div>
 <div class="mall-form-control">
     <label for="{{ type }}address_name">{{ 'offline.mall::frontend.form.recipient' | trans }}</label>
-    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}address_name" type="text"
+    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base text-lg font-lighting-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}address_name" type="text"
            value="{{ address.name }}"
            placeholder="{{ 'offline.mall::frontend.form.recipient_placeholder' | trans }}"
            name="{{ type }}address_name">
@@ -18,19 +18,19 @@
 </div>
 <div class="mall-form-control">
     <label for="{{ type }}lines">{{ 'offline.mall::frontend.form.address_lines' | trans }}</label>
-    <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}lines" type="text" name="{{ type }}lines">{{ address.lines }}</textarea>
+    <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base text-lg font-lighting-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}lines" type="text" name="{{ type }}lines">{{ address.lines }}</textarea>
     <div data-validate-for="{{ type }}lines"></div>
 </div>
 <div class="mall-two-fields flex flex-wrap">
     <div class="mall-form-control w-1/62 lg:w-1/2 pr-4 pl-4">
         <label for="{{ type }}zip">{{ 'offline.mall::frontend.form.zip' | trans }}</label>
-        <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}zip" name="{{ type }}zip" type="text"
+        <input class="block appearance-none w-full py-1 px-2 mb-1 text-base text-lg font-lighting-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}zip" name="{{ type }}zip" type="text"
                value="{{ address.zip }}">
         <div data-validate-for="{{ type }}zip"></div>
     </div>
     <div class="mall-form-control w-1/62 lg:w-1/2 pr-4 pl-4">
         <label for="{{ type }}city">{{ 'offline.mall::frontend.form.city' | trans }}</label>
-        <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}city" name="{{ type }}city" type="text"
+        <input class="block appearance-none w-full py-1 px-2 mb-1 text-base text-lg font-lighting-normal bg-white text-grey-darker border border-grey rounded" id="{{ type }}city" name="{{ type }}city" type="text"
                value="{{ address.city }}">
         <div data-validate-for="{{ type }}city"></div>
     </div>

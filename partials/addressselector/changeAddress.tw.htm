@@ -16,11 +16,11 @@
         <div data-validate-for="id"></div>
     </div>
     <div class="mall-form-actions">
-        <button class="mall-btn mall-btn--primary mall-btn--sm js-change-address-apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-green-lightest bg-green hover:bg-green-light py-1 px-2 text-sm leading-tight" type="submit">
+        <button class="mall-btn mall-btn--primary mall-btn--sm js-change-address-apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline text-green-lightest bg-green hover:bg-green-light py-1 px-2 text-sm leading-tight" type="submit">
             {{ 'offline.mall::frontend.apply' | trans }}
         </button>
         <a href="{{ __SELF__.addressPage | page({address: address.hashId, redirect: __SELF__.redirect}) }}"
-           class="mall-btn mall-btn--link mall-btn--sm inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-blue-lightest bg-blue hover:bg-blue-light py-1 px-2 text-sm leading-tight">
+           class="mall-btn mall-btn--link mall-btn--sm inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline text-blue-lightest bg-blue hover:bg-blue-light py-1 px-2 text-sm leading-tight">
             {{ 'offline.mall::frontend.address_selector.edit' | trans }}
         </a>
     </div>

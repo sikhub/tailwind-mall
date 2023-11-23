@@ -20,12 +20,12 @@
                     <div class="mall-switcher relative inline-flex align-middle">
                         <a href="javascript:;" data-request="onChangeDefaultBillingAddress"
                            data-request-data="id: '{{ address.hashId }}'"
-                           class="mall-switcher__item inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-blue-dark border-blue bg-white hover:bg-blue-light hover:text-blue-darker {{ __SELF__.defaultBillingAddressId == address.id ? 'mall-switcher__item--active active' }}">
+                           class="mall-switcher__item inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline text-blue-dark border-blue bg-white hover:bg-blue-light hover:text-blue-darker {{ __SELF__.defaultBillingAddressId == address.id ? 'mall-switcher__item--active active' }}">
                             {{ 'offline.mall::frontend.billing_address' | trans }}
                         </a>
                         <a href="javascript:;" data-request="onChangeDefaultShippingAddress"
                            data-request-data="id: '{{ address.hashId }}'"
-                           class="mall-switcher__item inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-blue-dark border-blue bg-white hover:bg-blue-light hover:text-blue-darker {{ __SELF__.defaultShippingAddressId == address.id ? 'mall-switcher__item--active active' }}">
+                           class="mall-switcher__item inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline text-blue-dark border-blue bg-white hover:bg-blue-light hover:text-blue-darker {{ __SELF__.defaultShippingAddressId == address.id ? 'mall-switcher__item--active active' }}">
                             {{ 'offline.mall::frontend.shipping_address' | trans }}
                         </a>
                     </div>
@@ -33,13 +33,13 @@
             </td>
             <td class="mall-address-list__table-actions">
                 <a href="{{ __SELF__.addressPage | page({address: address.hashId, redirect: 'account'}) }}"
-                   class="mall-btn mall-btn--sm text-blue-lightest bg-blue hover:bg-blue-light inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline py-1 px-2 text-sm leading-tight">
+                   class="mall-btn mall-btn--sm text-blue-lightest bg-blue hover:bg-blue-light inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline py-1 px-2 text-sm leading-tight">
                     {{ 'offline.mall::frontend.edit' | trans }}
                 </a>
                 {% if __SELF__.addresses.count > 1 %}
                     <a href="javascript:;" data-request="onDelete" data-request-data="id: '{{ address.hashId }}'"
                        data-request-confirm="{{ 'offline.mall::frontend.are_you_sure' | trans }}"
-                       class="text-blue-lightest bg-blue hover:bg-blue-light inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline py-1 px-2 text-sm leading-tight mall-btn mall-btn--sm">
+                       class="text-blue-lightest bg-blue hover:bg-blue-light inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base text-lg font-lighting-normal no-underline py-1 px-2 text-sm leading-tight mall-btn mall-btn--sm">
                         {{ 'offline.mall::frontend.delete' | trans }}
                     </a>
                 {% endif %}
