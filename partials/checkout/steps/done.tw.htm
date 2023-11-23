@@ -1,0 +1,15 @@
+<div class="mall-checkout-result mall-checkout-result--successful relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-grey-light border-green shadow-lg">
+        <div class="flex-auto p-6">
+            {% if __SELF__.order.is_paid %}
+                <h3 class="mall-checkout-result__heading">{{ 'offline.mall::frontend.checkout.payment.successful.heading' | trans }}</h3>
+                <p>{{ 'offline.mall::frontend.checkout.payment.successful.line_1' | trans }}</p>
+            {% else %}
+                <h3 class="mall-checkout-result__heading">{{ 'offline.mall::frontend.checkout.order.successful.heading' | trans }}</h3>
+                <p>{{ 'offline.mall::frontend.checkout.order.successful.line_1' | trans }}</p>
+            {% endif %}
+            {% partial __SELF__ ~ '::resultactions' %}
+        </div>
+</div>
+{% if __SELF__.dataLayer %}
+        {% partial __SELF__ ~ '::datalayer' %}
+{% endif %}

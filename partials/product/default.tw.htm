@@ -1,0 +1,18 @@
+<div class="mall-product flex flex-wrap">
+    <div class="mall-product__info w-1/62 lg:w-2/3 pr-4 pl-4">
+        {% partial __SELF__ ~ '::info' %}
+    </div>
+    <div class="mall-product__cart w-1/62 lg:w-1/3 pr-4 pl-4">
+        {% partial __SELF__ ~ '::title' %}
+        {% partial __SELF__ ~ '::cart' %}
+    </div>
+    <div class="mall-product__info-reviews w-1/62">
+        {% if __SELF__.showReviews %}
+            {% component 'productReviews' %}
+        {% endif %}
+    </div>
+</div>
+{% partial __SELF__ ~ '::scripts' %}
+{% if __SELF__.dataLayer %}
+    {% partial __SELF__ ~ '::datalayer' %}
+{% endif %}

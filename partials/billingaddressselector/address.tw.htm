@@ -1,0 +1,19 @@
+<div class="mall-address">
+    <p>
+        {% if address.company %}
+            {{ address.company }}<br/>
+        {% endif %}
+        {{ address.name }}<br/>
+        {{ address.lines }} <br/>
+        {{ address.zip }} {{ address.city }}<br/>
+        {% if address.state_id %}
+            {{ address.state.name }} <br/>
+        {% endif %}
+        {{ address.country.name }}
+    </p>
+    <p class="mall-address__actions">
+        <a href="javascript:;" class="js-change-address inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline py-1 px-2 text-sm leading-tight text-blue-dark border-blue bg-white hover:bg-blue-light hover:text-blue-darker" data-type="{{ __SELF__.type }}">
+            {{ 'offline.mall::frontend.change' | trans }}
+        </a>
+    </p>
+</div>

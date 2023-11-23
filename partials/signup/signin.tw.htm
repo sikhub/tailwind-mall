@@ -1,0 +1,24 @@
+<div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-grey-light">
+    <div class="flex-auto p-6">
+        <h3 class="mall-signup__heading">{{ 'offline.mall::frontend.signup.signin' | trans }}</h3>
+        <form data-request="onSignin" data-request-validate data-request-flash>
+            <div class="mall-form-control">
+                <label for="signin_email">{{ 'offline.mall::frontend.form.email' | trans }}</label>
+                <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="signin_email" name="login" type="text" placeholder="email@example.com">
+                <div data-validate-for="login"></div>
+            </div>
+            <div class="mall-form-control">
+                <label for="signin_password">{{ 'offline.mall::frontend.form.password' | trans }}</label>
+                <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="signin_password" type="password" placeholder="******************"
+                        name="password">
+                <div data-validate-for="password"></div>
+            </div>
+            <div class="mall-form-actions">
+                <button class="mall-btn mall-btn--primary inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-blue-lightest bg-blue hover:bg-blue-light" type="submit">
+                    {{ 'offline.mall::frontend.form.signin' | trans }}
+                </button>
+                {% partial __SELF__ ~ '::reset_password' %}
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="mall-form-checkbox relative block mb-2">
+    <label for="field-{{ field.hashId }}" class="mall-label text-grey-dark pl-6 mb-0">
+        {{ field.name }}
+    </label>
+    <input type="checkbox" class="mall-input-checkbox absolute mt-1 -ml-6" id="field-{{ field.hashId }}"
+            name="fields[{{ field.hashId }}]"
+            data-mall-custom-field
+            data-id="{{ field.hashId }}">
+    <div data-validate-for="{{ field.hashId }}"></div>
+</div>

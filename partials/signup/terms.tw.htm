@@ -1,0 +1,23 @@
+<div class="mall-signup-terms relative block mb-2">
+    <label class="mall-checkbox text-grey-dark pl-6 mb-0 js-mall-toggle-signup-terms" for="terms_accepted">
+        {% partial __SELF__ ~ '::termslabel' %}
+        <div data-validate-for="terms_accepted"></div>
+    </label>
+    <input class="js-mall-toggle-signup-terms absolute mt-1 -ml-6"
+           type="checkbox"
+           name="terms_accepted"
+           value="1"
+            id="terms_accepted"
+    >
+</div>
+{% put scripts %}
+    <script>
+        $(function () {
+            {# Disable the signup  button until the terms are accepted #}
+            $('.mall-btn-signup').prop('disabled', true)
+            $('.js-mall-toggle-signup-terms').on('click', function () {
+                $('.mall-btn-signup').prop('disabled', ! this.checked);
+            });
+        })
+    </script>
+{% endput %}

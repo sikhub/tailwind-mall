@@ -1,0 +1,13 @@
+<form data-request="onApplyDiscount"
+      data-request-validate
+      data-request-flash
+      data-request-success="$.publish('mall.discount.applied')">
+    <div class="mall-form-control">
+        <label for="code">{{ 'offline.mall::frontend.discount.label' | trans }}</label>
+        <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" name="code" type="text" id="code" placeholder="{{ 'offline.mall::frontend.discount.placeholder' | trans }}">
+        <div data-validate-for="code"></div>
+    </div>
+    <div class="text-end mb-4">
+        <button type="submit" class="mall-btn inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-green-lightest bg-green hover:bg-green-light">{{ 'offline.mall::frontend.discount.apply' | trans }}</button>
+    </div>
+</form>

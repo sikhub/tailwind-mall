@@ -1,0 +1,28 @@
+{% if not item.allow_out_of_stock_purchases %}
+    <div class="mall-product__property-stock text-{{ stock > 0 ? 'green' : 'red' }}">
+        {% if stock > 10 %}
+            {{ 'offline.mall::frontend.stock.many_available' | trans }}
+        {% elseif stock > 0 %}
+            {{ 'offline.mall::frontend.stock.available' | transchoice(stock, {stock: stock}) }}
+        {% else %}
+            {{ 'offline.mall::frontend.stock.unavailable' | trans }}
+        {% endif %}
+    </div>
+{% endif %}
+{% if stock > 0 or item.allow_out_of_stock_purchases %}
+    <div class="mall-product__add-to-cart-form">
+        <div class="mall-form-control">
+            <label for="quantity">{{ 'offline.mall::frontend.quantity' | trans }}</label>
+            <input type="number"
+                   id="quantity"
+                   class="mall-input block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded"
+                   min="{{ item.quantity_min }}" max="{{ item.quantity_max }}"
+                   name="quantity" value="{{ item.quantity_default | default(1) }}">
+            <div data-validate-for="quantity"></div>
+        </div>
+        <button type="submit" class="mall-add-to-cart-button inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-blue-lightest bg-blue hover:bg-blue-light py-3 px-4 text-xl leading-tight w-full text-center shadow" data-attach-loading>
+            {{ 'offline.mall::frontend.cart.add' | trans }}
+        </button>
+    </div>
+{% endif %}
+{% partial __SELF__ ~ '::belowcartbutton' %}

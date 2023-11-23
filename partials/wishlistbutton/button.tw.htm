@@ -1,0 +1,15 @@
+<button class="mall-btn mall-btn--full mall-add-to-wishlist-button inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-grey-lightest-lightest bg-grey-lightest hover:bg-grey-lightest-light shadow-sm w-full">
+    {{ 'offline.mall::frontend.wishlist.add' | trans }}
+</button>
+<script>
+    var btn = document.querySelector('.mall-add-to-wishlist-button')
+    if (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault()
+            var popup = document.querySelector('.mall-wishlist-button__popup')
+            if (popup) {
+                popup.classList.toggle('mall-wishlist-button__popup--visible')
+            }
+        })
+    }
+</script>

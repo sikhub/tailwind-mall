@@ -1,0 +1,16 @@
+<p class="mb-8">
+    {{ 'offline.mall::frontend.password_reset.lead_check' | trans }}
+</p>
+<form
+        data-request="{{ __SELF__ }}::onResetPassword"
+        data-request-update="'{{ __SELF__ }}::complete': '#partialUserResetForm'">
+    <div class="mall-form-control">
+        <label for="resetCode">{{ 'offline.mall::frontend.password_reset.activation_code' | trans }}</label>
+        <input name="code" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="resetCode" value="{{ __SELF__.code }}">
+    </div>
+    <div class="mall-form-control">
+        <label for="resetPassword">{{ 'offline.mall::frontend.password_reset.new_password' | trans }}</label>
+        <input name="password" type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" id="resetPassword">
+    </div>
+    <button type="submit" class="mall-btn mall-btn--primary">{{ 'offline.mall::frontend.password_reset.reset' | trans }}</button>
+</form>

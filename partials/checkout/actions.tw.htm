@@ -1,0 +1,7 @@
+{% if cart.products.count > 0 %}
+    <div class="mall-cart-actions text-end">
+        <button class="js-mall-checkout mall-btn-checkout mall-btn mall-btn--secondary inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline py-3 px-4 text-xl leading-tight text-green-lightest bg-green hover:bg-green-light">
+            {{ 'offline.mall::frontend.checkout.checkout' | trans }}
+        </button>
+    </div>
+{% endif %}

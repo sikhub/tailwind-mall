@@ -1,0 +1,10 @@
+    <div class="mall-filter mall-filter--on-sale relative block mb-2">
+        <label for="mall-on-sale" class="mall-label mall-label--checkbox js-mall-filter text-grey-dark pl-6 mb-0">
+            {{ 'offline.mall::frontend.onsale_label' | trans }}
+        </label>
+        <input type="checkbox" class="mall-input-checkbox absolute mt-1 -ml-6 js-mall-filter" id="mall-on-sale"
+                name="filter[on_sale]"
+                value="✓"
+                {{ filter.on_sale ? 'checked' }}
+        >
+    </div>

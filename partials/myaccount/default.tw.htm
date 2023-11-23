@@ -1,0 +1,26 @@
+<div class="mall-my-account flex flex-wrap">
+    <div class="w-1/62 lg:w-1/4 pr-4 pl-4">
+        <nav class="mall-my-account__nav flex flex-wrap list-reset pl-0 mb-0  flex-column">
+            <div class="mall-my-account__nav-item nav-item
+                {{ __SELF__.currentPage == 'orders' ? 'mall-my-account__nav-item--active' : '' }}">
+                <a class="inline-block py-2 px-4 no-underline {{ __SELF__.currentPage == 'orders' ? 'active' : '' }}" href="{{ __SELF__.pageUrl('orders') }}">{{ 'offline.mall::frontend.orders' | trans }}</a>
+            </div>
+            <div class="mall-my-account__nav-item nav-item
+                {{ __SELF__.currentPage == 'profile' ? 'mall-my-account__nav-item--active' : '' }}">
+                <a class="inline-block py-2 px-4 no-underline {{ __SELF__.currentPage == 'profile' ? 'active' : '' }}" href="{{ __SELF__.pageUrl('profile') }}">{{ 'offline.mall::frontend.profile' | trans }}</a>
+            </div>
+            <div class="mall-my-account__nav-item nav-item
+                {{ __SELF__.currentPage == 'addresses' ? 'mall-my-account__nav-item--active' : '' }}">
+                <a class="inline-block py-2 px-4 no-underline {{ __SELF__.currentPage == 'addresses' ? 'active' : '' }}" href="{{ __SELF__.pageUrl('addresses') }}">{{ 'offline.mall::frontend.addresses' | trans }}</a>
+            </div>
+            <div class="mall-my-account__nav-item ">
+                <a class="inline-block py-2 px-4 no-underline" href="javascript:;" data-request="onLogout" data-request-data="redirect: '/'">
+                    {{ 'offline.mall::frontend.session.logout' | trans }}
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="mall-my-account__content w-1/62 lg:w-3/4 pr-4 pl-4">
+        {% partial __SELF__ ~ ('::pages/' ~ __SELF__.currentPage) %}
+    </div>
+</div>

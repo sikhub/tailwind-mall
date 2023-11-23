@@ -1,0 +1,11 @@
+{% if images %}
+    <div class="mall-product__images flex flex-wrap no-gutters">
+        {% for image in images %}
+            <a class="mall-product__image relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-grey-light w-1/3 me-2 p-0" href="{{ image.path }}"
+               data-fancybox="product"
+               data-caption="{{ image.title }}">
+                <img src="{{ image.thumb(240, 240, 'crop') }}" alt="{{ image.title }}" class="w-full rounded w-full max-w-full h-auto"/>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}
